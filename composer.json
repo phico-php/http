@@ -1,0 +1,31 @@
+{
+  "name": "phico/http",
+  "description": "Simple wrapper around the built in cURL functions built for Phico",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "autoload": {
+    "psr-4": {
+      "Phico\\Http\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "indgy",
+      "email": "me@indgy.uk"
+    }
+  ],
+  "minimum-stability": "stable",
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true,
+      "pestphp/pest-plugin": true
+    }
+  },
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "*",
+    "pestphp/pest": "^2.34"
+  }
+}
