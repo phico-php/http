@@ -1,0 +1,29 @@
+GET http://api.picophp.local/cookies
+Cookie: foo=123
+###
+
+POST http://api.picophp.local
+Content-Type: multipart/form-data; boundary=__
+Cookie: foo=123; bar=456
+
+--__
+Content-Disposition: form-data; name="email"
+
+kermit@themuppetshow.com
+--__
+Content-Disposition: form-data; name="password"
+
+M1s5-P1ggY
+--__--
+
+###
+
+POST http://api.picophp.local
+Content-Type: application/json
+Cookie: foo=123; bar=456;
+
+{
+    "email": "fozzy.bear@themuppets.com",
+    "name": "Fozzy Bear"
+}
+###
