@@ -1,11 +1,11 @@
 {
-  "name": "phico/http",
+  "name": "phico/http-client",
   "description": "Simple wrapper around the built in cURL functions built for Phico",
   "type": "project",
   "license": "BSD-3-Clause",
   "autoload": {
     "psr-4": {
-      "Phico\\Http\\": "src/"
+      "Phico\\Http\\Client\\": "src/"
     }
   },
   "authors": [

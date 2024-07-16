@@ -2,6 +2,14 @@
 
 A simple http client wrapping the built in cURL functions.
 
+## Installation
+
+Install via composer
+
+```sh
+composer require phico/http-client
+```
+
 ## Usage
 
 ### Making requests

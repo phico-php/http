@@ -10,7 +10,7 @@ use CURLStringFile;
 use InvalidArgumentException;
 use RuntimeException;
 
-class Http
+class HttpClient
 {
     private string $method;
     private string $url;
