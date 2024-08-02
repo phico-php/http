@@ -6,7 +6,10 @@
   "autoload": {
     "psr-4": {
       "Phico\\Http\\Client\\": "src/"
-    }
+    },
+    "files": [
+      "src/functions.php"
+    ]
   },
   "authors": [
     {
