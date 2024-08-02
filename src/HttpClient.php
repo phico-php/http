@@ -257,9 +257,9 @@ class HttpClient
             // set the url with params
             $ch = \curl_init(
                 sprintf(
-                    '%s?%s',
+                    '%s%s',
                     $this->url,
-                    \http_build_query($this->params)
+                    (empty($this->params)) ? '' : '?' . \http_build_query($this->params)
                 )
             );
             // set the request method
