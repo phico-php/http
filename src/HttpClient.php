@@ -151,7 +151,7 @@ class HttpClient
     public function headers(array $headers): self
     {
         foreach ($headers as $name => $value) {
-            $this->header($name, $value);
+            $this->header($name, (string) $value);
         }
         return $this;
     }
