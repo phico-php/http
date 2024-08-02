@@ -147,6 +147,14 @@ class HttpClient
         $this->headers[] = "$name: $value";
         return $this;
     }
+    // set multiple request headers
+    public function headers(array $headers): self
+    {
+        foreach ($headers as $name => $value) {
+            $this->header($name, $value);
+        }
+        return $this;
+    }
     // attach string as file to form data
     public function asFile(string $content, ?string $name = null, ?string $mime_type = null): self
     {
