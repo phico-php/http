@@ -36,6 +36,41 @@ class Response
         return $this->$name;
     }
 
+    public function cookie(string $name): ?string
+    {
+        if (!isset($this->headers['set-cookie'])) {
+            return null;
+        }
+
+        foreach ($this->headers['set-cookie'] as $header) {
+            $parts = explode('; ', $header);
+            foreach ($parts as $part) {
+                if (strpos($part, $name . '=') !== false) {
+                    list($name, $value) = explode('=', trim($part), 2);
+                    return $value;
+                }
+            }
+        }
+
+        return null;
+    }
+    public function header(string $name, mixed $default = null): mixed
+    {
+        return $this->headers[$name] ?? $default;
+    }
+    public function headers(): array
+    {
+        return $this->headers;
+    }
+    public function location(): ?string
+    {
+        return $this->headers['location'][0] ?? null;
+    }
+    public function status(): int
+    {
+        return $this->status;
+    }
+
     public function isError()
     {
         return $this->status >= 400 && $this->status < 600;
