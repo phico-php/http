@@ -38,7 +38,7 @@ class HttpClient
         $this->files = [];
         $this->headers = [];
         $this->options = [
-            \CURLOPT_USERAGENT => 'Mozilla/5.0 (compatible; Phico-php/1.0; +https://pico-php.net)',
+            \CURLOPT_USERAGENT => 'Mozilla/5.0 (compatible; Phico/1.0; +https://phico-php.net)',
             \CURLINFO_HEADER_OUT => true,
             \CURLOPT_HEADER => false,
             \CURLOPT_RETURNTRANSFER => true,
